@@ -1,4 +1,4 @@
 {% extends 'core/base.html' %}{% block content %}<section class="panel narrow"><h1>Профиль педагога</h1><form method="post">{% csrf_token %}
-<div class="field"><label>Имя</label><input name="first_name" value="{{ user.first_name }}"></div><div class="field"><label>Фамилия</label><input name="last_name" value="{{ user.last_name }}"></div><div class="field"><label>Email</label><input name="email" type="email" value="{{ user.email }}"></div>
+<div class="field"><label>Фамилия</label><input name="first_name" value="{{ user.first_name }}"></div><div class="field"><label>Имя</label><input name="last_name" value="{{ user.last_name }}"></div><div class="field"><label>Email</label><input name="email" type="email" value="{{ user.email }}"></div>
 {% for field in form %}<div class="field"><label>{{ field.label }}</label>{{ field }}{% for error in field.errors %}<small class="error">{{ error }}</small>{% endfor %}</div>{% endfor %}
 <button class="button">Сохранить профиль</button></form></section>{% endblock %}
