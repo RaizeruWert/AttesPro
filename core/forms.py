@@ -4,8 +4,8 @@ from django.contrib.auth.models import User
 from .models import Profile, Assignment, AttestationApplication, EvidenceDocument
 
 class RegisterForm(UserCreationForm):
-    first_name = forms.CharField(label="Имя", max_length=150)
-    last_name = forms.CharField(label="Фамилия", max_length=150)
+    first_name = forms.CharField(label="Фамилия", max_length=150)
+    last_name = forms.CharField(label="Имя", max_length=150)
     email = forms.EmailField(label="Электронная почта")
     class Meta:
         model = User
